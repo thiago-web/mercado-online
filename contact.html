@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> 
+
+<html class="no-js"> <!--<![endif]-->
+
+    
+    <head>
+
+        <title>Dueeme - Contato</title>
+
+        <!-- meta -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        
+        <!-- stylesheets -->
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+        <link rel="stylesheet" href="assets/css/animate.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+
+        <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBlExNK4fUP4TMR-Jo-9wNHKUXLpyYCmrU&callback=initMap"></script>
+        <!-- <script src="https://maps.googleapis.com/maps/api/js?key=" type="text/javascript"></script> -->
+        <style>
+          #map-canvas {
+            height: 100%;
+          }
+          html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+          }
+        </style>
+        <script type="text/javascript">
+            let map: google.maps.Map;
+
+            function initMap(): void {
+              map = new google.maps.Map(document.getElementById("map-canvas") as HTMLElement, {
+                center: { lat: -34.397, lng: 150.644 },
+                zoom: 8,
+              });
+            }
+        </script>
+        <script>
+            function initialize() {
+                var mapCanvas = document.getElementById('-canvas');
+                var mapOptions = {
+                    center: new google.maps.LatLng(-22.7115822118803, -46.81166236677739),
+                    zoom: 16,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP
+                }
+                var map = new google.maps.Map(mapCanvas, mapOptions)
+            }
+            google.maps.event.addDomListener(window, 'load', initialize);
+        </script>
+
+    </head>
+
+    <body>
+
+        <script type="text/javascript">
+            function mascaraDeTelefone(telefone)
+            {
+                const textoAtual = telefone.value;
+                const isCelular = textoAtual.length === 11;
+                let textoAjustado;
+                if(isCelular) {
+                    const parte1 = textoAtual.slice(0,2);
+                    const parte2 = textoAtual.slice(2,7);
+                    const parte3 = textoAtual.slice(7,11);
+                    textoAjustado = `(${parte1})${parte2}-${parte3}`;
+                    // const parte1 = textoAtual.slice(0,5);
+                    // const parte2 = textoAtual.slice(5,9);
+                    // textoAjustado = `${parte1}-${parte2}`
+                } 
+                // else {
+                //     const parte1 = textoAtual.slice(0,2);
+                //     const parte2 = textoAtual.slice(2,7);
+                //     const parte3 = textoAtual.slice(7,11);
+                //     textoAjustado = `(${parte1})${parte2}-${parte3}`
+                //     // const parte1 = textoAtual.slice(0,2);
+                //     // const parte2 = textoAtual.slice(3,7);
+                //     // const parte3 = textoAtual.slice(7,12);
+                //     // textoAjustado = `(${parte1})${parte2}-${parte3}`
+                // }
+
+                telefone.value = textoAjustado;
+            }
+            function tiraHifen(telefone) 
+            {
+                const textoAtual = telefone.value;
+                const textoAjustado = textoAtual.replace(/\-/g, '');
+
+                telefone.value = textoAjustado;
+            }
+        </script>
+
+        <div id="contact-page">
+
+
+            <!-- site-navigation start -->  
+            <nav id="mainNavigation" class="navbar navbar-dafault main-navigation" role="navigation">
+                <div class="container">
+                    
+                    <div class="navbar-header">
+                        
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                             <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        
+                        <!-- navbar logo -->
+                        <div class="navbar-brand">
+                            <span class="sr-only">Dueeme</span>
+                            <a href="index.html">
+                                <img src="assets/img/main_logo.png" class="img-responsive center-block">
+                            </a>
+                        </div>
+                        <!-- navbar logo -->
+
+                    </div><!-- /.navbar-header -->
+
+                    <!-- nav links -->
+                    <div class="collapse navbar-collapse" id="main-nav-collapse">
+                        <ul class="nav navbar-nav navbar-right text-uppercase">
+                            <li>
+                                <a href="index.html"><span>Inicio</span></a>
+                            </li>
+
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span>Pagínas</span></a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="about.html">Sobre Nós</a>
+                                    </li>
+                                    <li>
+                                        <a href="service.html">Serviços</a>
+                                    </li>
+                                    <li>
+                                        <a href="portfolio.html">Portifólio</a>
+                                    </li>
+                                    <li>
+                                        <a href="gallery.html">Galeria</a>
+                                    </li>
+                                    <li>
+                                        <a href="404.html">404 page</a>
+                                    </li>
+                                    <li>
+                                        <a href="coming_soon.html">Em breve</a>
+                                    </li>
+                                </ul>   <!-- /.dropdown-menu -->
+                            </li> <!-- /.dropdown -->
+
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span>Blog</span></a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="multiple_blog_left_sidebar.html">multiple with left sidebar</a>
+                                    </li>
+                                    <li>
+                                        <a href="multiple_blog.html">multiple with right sidebar</a>
+                                    </li>
+                                    <li>
+                                        <a href="single_blog_left_sidebar.html">single with left sidebar</a>
+                                    </li>
+                                    <li>
+                                        <a href="single_blog.html">single with right sidebar</a>
+                                    </li>
+                                    <li>
+                                        <a href="single_blog_full_width.html">single full width</a>
+                                    </li>
+                                </ul> <!-- /.dropdown-menu -->
+                            </li> <!-- /.dropdown -->
+
+                            <li>
+                                <a href="contact.html"><span>Contato</span></a>
+                            </li>
+                        </ul>
+                    </div><!-- nav links -->
+                    
+                </div><!-- /.container -->
+            </nav>
+            <!-- site-navigation end -->
+
+
+
+            <!-- header begin -->
+            <header class="page-head">
+                <div class="header-wrapper">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+
+                                <ol class="breadcrumb">
+                                    <li><a href="index.html">Inicio</a></li>
+                                    <li class="active">Contato</li>
+                                </ol> <!-- end of /.breadcrumb -->
+
+                            </div>
+                        </div>
+                    </div> <!-- /.container -->
+                </div> <!-- /.header-wrapper -->
+            </header> <!-- /.page-head (header end) -->
+
+
+            <div claas="main-content">
+                <div class="container">
+
+                    <!-- google map iframe -->
+                    <section class="g-map">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="google-map">
+                                    <div id="map-canvas" style="height: 100%; width: 50px;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </section> <!-- /.g-map (google-map end) -->
+
+
+
+                    <!-- contact adresses section begin -->
+                    <section class="contact-address bg-white">
+                        <div class="row">
+
+                            <div class="col-md-4 col-xs-12">
+                                <div class="address-info">
+                                    <div class="row">
+
+                                        <div class="col-md-3 col-xs-3">
+                                            <div class="address-info-icon text-center center-block bg-light-gray">
+                                                <i class="fa fa-map-marker"></i>
+                                            </div> <!-- /.address-info-icon -->
+                                        </div>
+
+                                        <div class="col-md-9 col-xs-9 address-info-desc">
+                                            <h3>Nosso Endereço</h3>
+                                            <p>
+                                                Rua Alcides Postali, 69 <br/>
+                                                Jardim San Dimas , Brasil
+                                            </p>
+                                        </div> <!-- /.address-info-desc -->
+
+                                    </div>
+                                </div> <!-- /.address-info -->
+                            </div>
+
+                            <div class="col-md-4 col-xs-12">
+                                <div class="address-info">
+                                    <div class="row">
+
+                                        <div class="col-md-3 col-xs-3">
+                                            <div class="address-info-icon text-center center-block bg-light-gray">
+                                                <i class="fa fa-phone"></i>
+                                            </div> <!-- /.address-info-icon -->
+                                        </div>
+
+                                        <div class="col-md-9 col-xs-9 address-info-desc">
+                                            <h3>Telefones</h3>
+                                            <p>
+                                                Fixo: (19) 91919-1919
+                                                <br/>
+                                                Celular: (19) 91919-1919
+                                            </p>
+                                        </div> <!-- /.address-info-desc -->
+
+                                    </div>
+                                </div> <!-- /.address-info -->
+                            </div>
+
+                            <div class="col-md-4 col-xs-12">
+                                <div class="address-info">
+                                    <div class="row">
+
+                                        <div class="col-md-3 col-xs-3">
+                                            <div class="address-info-icon text-center center-block bg-light-gray">
+                                                <i class="fa fa-envelope-o"></i>
+                                            </div> <!-- /.address-info-icon -->
+                                        </div>
+
+                                        <div class="col-md-9 col-xs-9 address-info-desc">
+                                            <h3>Nosso Email</h3>
+                                            <p>
+                                                info@example.com
+                                                <br/>
+                                                www.example.com
+                                            </p>
+                                        </div> <!-- /.address-info-desc -->
+
+                                    </div>
+                                </div> <!-- /.address-info -->
+                            </div>
+
+                        </div>
+                    </section> <!-- /.contact-address -->
+
+
+
+                    <!-- contact-form -->
+                    <section class="contact-form">
+
+                        <!-- call for contact -->
+                        <div class="headline text-center">
+                            <div class="row">
+                                <div class="col-md-6 col-md-offset-3">
+                                    <h2 class="section-title">Diga olá! Não seja tímido(a) .</h2>
+                                    <p class="section-sub-title">
+                                        Se você tiver dúvidas ou comentários, ou apenas gostaria de dizer olá,
+                                        <br/> não hesite em contactar a nossa simpática equipe.
+                                    </p> <!-- /section-sub-title -->
+                                </div>
+                            </div>
+                        </div> <!-- /.contact-speech -->
+
+                        <form method="post" action="contact.php">
+
+                            <div class="row">
+                                <div class="col-md-4">
+
+                                    <div class="form-group">
+                                        <input  name="name" type="text" class="form-control" id="name" required="required" placeholder="Nome Completo">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input name="email" type="email" class="form-control" id="email" required="required" placeholder="Endereço de Email">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input name="number" type="text" class="form-control" id="telefone" onchange="mascaraDeTelefone(this)" onfocus="tiraHifen()" required="required" placeholder="Seu Telefone">
+                                    </div>
+
+                                </div>
+
+                                <div class="col-md-8">
+                                    <textarea name="message" type="text" class="form-control" id="message" rows="8" required="required" placeholder="Digite aqui a sua mensagem.."></textarea>
+                                </div>
+                            </div>
+
+                                <button type="submit" id="submit" name="submit" class="btn btn-black">Enviar Mensagem</button>
+                            
+                        </form> <!-- form end -->
+                    </section> <!-- /.contact-form -->
+
+                </div> <!-- container -->
+            </div>
+            <!-- main-content end -->
+
+
+            <footer>
+                <div class="container">
+                    <div class="row">
+
+                        <!-- useful links -->
+                        <div class="col-md-3 col-sm-6 col-xs-6 footer-widget">
+                            <h4>Atalhos </h4>
+                            <ul class="row footer-links">
+                                <div class="col-md-6 col-sm-6 col-xs-6">
+                                    <li><a href="#">Web Design</a></li>
+                                    <li><a href="#">About Us</a></li>
+                                    <li><a href="#">Mobile</a></li>
+                                    <li><a href="#">Blog</a></li>
+                                    <li><a href="#">Services</a></li>
+                                </div>
+
+                                <div class="col-md-6 col-sm-6 col-xs-6">
+                                    <li><a href="#">Organization</a></li>
+                                    <li><a href="#">Career</a></li>
+                                    <li><a href="#">Media</a></li>
+                                    <li><a href="#">24/7</a></li>
+                                    <li><a href="#">Right Way</a></li>
+                                </div>
+                            </ul>
+                        </div>
+
+                        <!-- recent news -->
+                        <div class="col-md-3 col-sm-6 col-xs-6 footer-widget">
+                            <h4>Notícias Recentes</h4>
+
+                            <div class="row footer-news">
+                                <div class="col-md-4 col-sm-4 col-xs-6">
+                                    <img src="assets/img/intro.jpg" class="img-responsive center-block" alt="recent news 1">
+                                </div>
+                                <div class="col-md-8 col-sm-4 col-xs-6">
+                                    <div class="row">
+                                        <p class="text-capitalize">
+                                            <a href="#">
+                                                a clear website gives more experience to the visitors
+                                            </a>
+                                        </p>
+                                        <p class="news-date">Dec 12,2015</p>
+                                    </div>
+                                </div>
+                            </div> <!-- /.footer-news -->
+
+                            <div class="row footer-news">
+                                <div class="col-md-4 col-sm-4 col-xs-6">
+                                    <img src="assets/img/intro.jpg" class="img-responsive center-block" alt="recent news 2">
+                                </div>
+                                <div class="col-md-8 col-sm-4 col-xs-6">
+                                    <div class="row">
+                                        <p class="text-capitalize">
+                                            <a href="#">
+                                                a clear website gives more experience to the visitors
+                                            </a>
+                                        </p>
+                                        <p class="news-date">Dec 12,2015</p>
+                                    </div>
+                                </div>
+                            </div> <!-- /.footer-news -->
+                        </div> <!-- /.footer-widget -->
+
+                        <!-- news-letter -->
+                        <div class="col-md-3 col-sm-6 col-xs-6 footer-widget">
+                            <h4>Novidades e Atualização</h4>
+
+                            <p>Inscreva-se em nossa lista de e-mail para obter as últimas atualizações e ofertas</p>
+                            <div class="input-group margin-bottom-sm">
+                                <input class="form-control" type="text" placeholder="Endereço de e-mail">
+                                <span class="input-group-addon">
+                                    <i class="fa fa-paper-plane fa-fw"></i>
+                                </span>
+                            </div>
+                            <p>Nós respeitamos a sua privacidade</p>
+                        </div> <!-- /.footer-widget -->
+
+                        <!-- about avada agency -->
+                        <div class="col-md-3 col-sm-6 col-xs-6 footer-widget">
+                            <h4>Dueeme </h4>
+
+                            <p>
+                                É uma empresa focada em limpeza automotiva detalhada.
+                            </p>
+
+                            <div class="footer-address">
+                                <p>
+                                    Cel: (19)9 1919-1919 Marcelo Carvalho  <br>
+                                    Email: example@mail.com 
+                                </p>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <ul class="footer-share-button">
+                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                    </ul> <!-- /.footer-share-button -->
+                                </div>
+                            </div>
+                        </div> <!-- /.footer-widget -->
+
+                    </div>
+                </div>
+            </footer>
+
+
+            <!-- footer-navigation start -->  
+            <nav class="hidden-xs hidden-sm navbar footer-nav" role="navigation">
+                <div class="container">
+                    
+                    <div class="navbar-header">
+                        
+                        <!-- navbar logo -->
+                        <div class="navbar-brand">
+                            <span class="sr-only">&copy;Thiago Henrique da Silva Pinto</span>
+                            <a href="index.html">
+                                &copy;Thiago Henrique da Silva Pinto
+                            </a>
+                        </div>
+                        <!-- navbar logo -->
+
+                    </div><!-- /.navbar-header -->
+
+                    <!-- nav links -->
+                    <div class="collapse navbar-collapse" id="main-nav-collapse">
+                        <ul class="nav navbar-nav navbar-right text-capitalize">
+                            <li><a href="#about">
+                                <span>Inicio</span>
+                            </a></li>
+
+                            <li><a href="#services">
+                                <span>Páginas</span>
+                            </a></li>
+
+                            <!-- <li><a href="#portfolio">
+                                <span>Portifólio</span>
+                            </a></li>
+
+                            <li><a href="#team">
+                                <span>portfolio</span>
+                            </a></li>
+
+                            <li><a href="#pricing">
+                                <span>blog</span>
+                            </a></li> -->
+
+                            <li><a href="#blog">
+                                <span>Loja</span>
+                            </a></li>
+
+                            <li><a href="#contact">
+                                <span>Contato</span>
+                            </a></li>
+                        </ul>
+                    </div><!-- nav links -->
+                    
+                </div><!-- /.container -->
+            </nav>
+            <!-- footer-navigation end -->
+
+        </div> <!-- /#contact-page (page end) -->
+
+
+    </body>
+</html>
