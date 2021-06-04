@@ -7,18 +7,21 @@
         <meta name="author" content="Thiago Henrique da Silva Pinto" />
         <title>Armazém Ponto Kent</title>
         <!-- Scripts para Buscar -->
-        <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+        <!-- <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.quicksearch/2.3.1/jquery.quicksearch.js"
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.quicksearch/2.3.1/jquery.quicksearch.js" -->
         ></script>
 
         <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="../../assets/favicon.ico" />
         <!-- Bootstrap icons-->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" /> -->
         <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="../../css/styles.css" rel="stylesheet" />
+        <link href="../../../../css/styles.css" rel="stylesheet" />
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
     </head>
     <body>
 
@@ -57,18 +60,45 @@
                             <img class="card-img-top" src="<?php echo $value['imagem']; ?>" alt="imagem">
                             <!-- Imagem do Produto - Fim -->
                             <!-- Detalhes do Produto - Inicio -->
-                            <div class="card-body p-4">
+                            <div class="card-body p-4 border-bottom-1 bg-transparent " >
                                 <div class="text-center">
                                     <h5 class="fw-bolder"> <?php echo $value['nome'] ;?></h5>
                                     R$00,00
                                 </div>
-                            </div>
+                                <!-- Button trigger modal -->
+                                
+                                <div class="text-center">
+                                    <button class="btn btn-outline-success mt-5" style="color: black; border-color: black;" href="" data-toggle="modal" data-target="#MyModal"> Mais informaçoes  </button>
+                                </div>
+                                <div id="MyModal" class="modal fade" role="dialog">
+                                    <div class="modal-dialog">
+
+                                      <!-- Modal content-->
+                                      <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                          <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">Titulo</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                              <span aria-hidden="true">&times;</span>
+                                            </button>
+                                          </div>
+                                          <div class="modal-body">
+                                            ...
+                                          </div>
+                                          <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                                            <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                </div>
+                          </div>
                             <!-- Detalhes do Produto - Fim -->
                             <!-- Ações do Produto - Inicio -->
-                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center">
-                                    <a class="btn btn-outline-dark mt-auto" href="?adicionar= <?php echo 
-                                    $key ?>" > Adicionar ao Carrinho</a>
+                            <div class="card-footer p-4 pt-0 border-top-1 bg-transparent ">
+                                <div class="text-center mt-3" >
+                                    <a  class="btn btn-outline-danger mt-auto" href="?adicionar= <?php echo $key ?>" style=" border-color: black ; " > Adicionar ao Carrinho</a>
                                 </div>
                             </div>
                             <!-- Ações do Produto - Fim-->
@@ -103,5 +133,10 @@
                 <!-- Fim da linha de Produtos -->
             </div>
         </section>
+         <!-- Importando o jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  
+  <!-- Importando o js do bootstrap -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>       
     </body>
     </html> 
