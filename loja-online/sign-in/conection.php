@@ -7,4 +7,4 @@ $banco = "bd_armazem-ponto-kent";
 
 $conect = mysqli_connect($host, $user, $pass, $banco);
 
-?>
+return $conect;
