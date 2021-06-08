@@ -1,4 +1,8 @@
+<<<<<<< HEAD:loja-online/sign-in/login-page.php
 "<?php
+=======
+<?php
+>>>>>>> 3a34dfae9de89003dab223cf920eaeb0ffc584a0:loja-online/sign-in/index.html
 
 session_start();
 ?>
@@ -45,7 +49,10 @@ session_start();
 </head>
 
 <body class="text-center">
+<<<<<<< HEAD:loja-online/sign-in/login-page.php
   <div id = "fb-root" > </div> <script assíncrona adiar crossorigin = "anonymous" src = "https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v10.0" nonce = "sH9BUAVH" > </script> 
+=======
+>>>>>>> 3a34dfae9de89003dab223cf920eaeb0ffc584a0:loja-online/sign-in/index.html
   <div class="container text-center">
     <div class="row">
       <form class="form-signin" method="POST" action="login.php">
@@ -92,17 +99,25 @@ session_start();
           <div class="form-group col-md-12">
             <button class="btn btn-lg btn-primary btn-block" type="submit">Entrar</button>
           </div>
+<<<<<<< HEAD:loja-online/sign-in/login-page.php
           <div class="form-group col-md-12">
             <div class = "fb-login-button" data-width = "" data-size = "grande" data-button-type = "continue_with" data-layout = "default" data-auto-logout-link = "false " data-use-continue-as = " false " > 
             </div>
           </div>
+=======
+
+>>>>>>> 3a34dfae9de89003dab223cf920eaeb0ffc584a0:loja-online/sign-in/index.html
         </div>
       </form>
     </div>
     <div class="row">
       <div class="container">
         <a><span class="btn btn-outline-success " data-toggle="modal" data-target="#MyModal" style="border: none; border-color: transparent;">Cadastrar-me</span></a>
+<<<<<<< HEAD:loja-online/sign-in/login-page.php
         <p class="mt-1 mb-1 text-muted">&copy; 2021</p>
+=======
+        <p class="mt-5 mb-3 text-muted">&copy; 2021</p>
+>>>>>>> 3a34dfae9de89003dab223cf920eaeb0ffc584a0:loja-online/sign-in/index.html
       </div>
 
       <div id="MyModal" class="modal fade" role="dialog">
@@ -131,7 +146,11 @@ session_start();
                     </div>
                     <div class="form-group col-md-4">
                       <label>Data de Nascimento</label>
+<<<<<<< HEAD:loja-online/sign-in/login-page.php
                       <input type="text" maxlength="10" required minlength="10" onkeypress="mascaraData( this, event)" class="form-control" name="data-nas-cliente" placeholder="Ex: 25/05/2000">
+=======
+                      <input type="text" maxlength="10" minlength="10" onkeypress="mascaraData( this, event)" class="form-control" name="data-nas-cliente" placeholder="Ex: 25/05/2000">
+>>>>>>> 3a34dfae9de89003dab223cf920eaeb0ffc584a0:loja-online/sign-in/index.html
                     </div>
                   </div>
                   <div class="row">

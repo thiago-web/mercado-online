@@ -16,7 +16,10 @@ session_start();
   <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
   <!-- Bootstrap icons-->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+<<<<<<< HEAD
   
+=======
+>>>>>>> 3a34dfae9de89003dab223cf920eaeb0ffc584a0
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <!-- scripts -->
   <script type="text/javascript" src="assets/js/modernizr.custom.97074.js"></script>
@@ -78,7 +81,11 @@ session_start();
           <!-- <li><a href="#">Deals</a></li> -->
           <li><a href="#">Sobre nós</a></li>
           <li><a href="contact.html">Contato</a></li>
+<<<<<<< HEAD
           <li><a href="loja-online/sign-in/login-page">Compre Online</a></li>
+=======
+          <li><a href="loja-online/sign-in/index.html">Compre Online</a></li>
+>>>>>>> 3a34dfae9de89003dab223cf920eaeb0ffc584a0
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <?php
@@ -87,6 +94,7 @@ session_start();
           if (!empty($_SESSION['logado'])) {
           ?>
             <li><a href="#"><span class="glyphicon glyphicon-user"></span> Minha Conta</a></li>
+<<<<<<< HEAD
             <li><a href=""  onClick="document.getElementByName('logout-btn').submit();" name="logout-btn" value= "logout" type="submit" ><span  class="glyphicon glyphicon-log-out"></span> Sair</a></li>
             <li><a href="" type="submit" >
               <span class="badge bg-dark text-white ms-1 rounded-pill">0</span><span class="glyphicon glyphicon-shopping-cart"></span> Carrinho</a></li>
@@ -95,6 +103,12 @@ session_start();
               <button type="submit" class="btn btn-outline-dark btn-sm" name="logout-btn" value="logout" >
                 <span  class="glyphicon glyphicon-log-out"></span>Sair
               </button>
+=======
+
+            <li><a href="#"><span class="badge bg-dark text-white ms-1 rounded-pill">0</span><span class="glyphicon glyphicon-shopping-cart"></span> Carrinho</a></li>
+            <form action="">
+              <input type="submit" class="btn btn-outline-dark btn-sm" name="logout-btn" value="logout">
+>>>>>>> 3a34dfae9de89003dab223cf920eaeb0ffc584a0
             </form>
 
             <?php
@@ -108,8 +122,14 @@ session_start();
             }
           } else {
             ?>
+<<<<<<< HEAD
             <li><a href=<?php echo'loja-online/sign-in/login-page.php' ?>><span class="glyphicon glyphicon-user"></span> Logar Na Conta</a></li>
               
+=======
+            <li><a href=<?php echo "/mercado-online/loja-online/sign-in/login-page.php" ?>><span class="glyphicon glyphicon-user"></span> Logar Na Conta</a></li>
+
+
+>>>>>>> 3a34dfae9de89003dab223cf920eaeb0ffc584a0
           <?php
           } ?>
 
