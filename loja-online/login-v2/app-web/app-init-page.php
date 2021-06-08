@@ -7,7 +7,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>App-web | Armazém Ponto Kent</title>
+  <title>App-Web | Armazém Ponto Kent</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -22,9 +22,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- Navbar -->
   <nav class="main-header navbar navbar-expand-md navbar-light navbar-white">
     <div class="container">
-      <a href="../../index3.html" class="navbar-brand">
-        <img src="../../dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-        <span class="brand-text font-weight-light"> Compre Online </span>
+      <a href="site_da_empresa" class="navbar-brand">
+        <img src="" alt="Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+        <span class="brand-text font-weight-light"> Armazém Ponto Kent </span>
       </a>
 
       <button class="navbar-toggler order-1" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -35,10 +35,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <!-- Left navbar links -->
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a href="index3.html" class="nav-link">Pagina Inicial</a>
+            <a href="#" class="nav-link">Pagina Inicial</a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">Compras</a>
+            <a href="#" class="nav-link"> Histórico de Compras</a>
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link">Pedidos</a>
@@ -64,6 +64,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
       <!-- Right navbar links -->
       <ul class="order-1 order-md-3 navbar-nav navbar-no-expand ml-auto">
+        <li class="nav-item"><a class="nav-link">
+        <span class="badge bg-dark text-white ms-1 rounded-pill ">0</span><span class="glyphicon glyphicon-shopping-cart"></span> Carrinho</a>
+        </li>
         <!-- Notifications Dropdown Menu -->
         <li class="nav-item dropdown">
           <a class="nav-link" data-toggle="dropdown" href="#">
@@ -91,6 +94,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
           </div>
         </li>
+        
         <li class="nav-item">
           <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
             <i class="fas fa-th-large"></i>
