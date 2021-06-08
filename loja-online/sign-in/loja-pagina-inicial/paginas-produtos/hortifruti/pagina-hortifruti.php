@@ -37,7 +37,7 @@
                 include('../db_functions/conection.php');
                 // Cria a Query
                 $produtos = "SELECT nome_produto, preco_produto, descricao_produto, imagem_produto 
-                FROM produtos";
+                FROM produtos WHERE id_categoria = '7'";
                 $result_produtos = mysqli_query($conect, $produtos);
 
                 // teste para Array com Banco

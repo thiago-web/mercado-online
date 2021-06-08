@@ -23,7 +23,7 @@ if ($linha == 1) {
 	?>
 	<script type="text/javascript">
 		alert('CPF já cadastrado na nossa base de dados, faça o login para continuar !');
-		window.location.href = "index.html";
+		window.location.href = "login-page.php";
 	</script>
 	<?php
 }
@@ -38,7 +38,7 @@ else {
 		?>
 		<script type="text/javascript">
 			alert('Informações cadastradas!');
-		window.location.href = "index.html";
+			window.location.href = "login-page.php";
 		</script>
 		<?php
 	}
