@@ -13,7 +13,7 @@
   <!-- icheck bootstrap -->
   <link rel="stylesheet" href="../../aseets/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
   <!-- Theme style -->
-  <link rel="stylesheet" href="../../assets/css/adminlte.min.css">
+  <link rel="stylesheet" href="../../assets/dist/css/adminlte.min.css">
 </head>
 <body class="hold-transition login-page">
 <div class="login-box">
@@ -58,6 +58,6 @@
 <!-- Bootstrap 4 -->
 <script src="../../assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- AdminLTE App -->
-<script src="../../assets/js/adminlte.min.js"></script>
+<script src="../../assets/dist/js/adminlte.min.js"></script>
 </body>
 </html>
