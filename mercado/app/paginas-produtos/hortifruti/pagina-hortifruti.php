@@ -20,7 +20,7 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="../../../../../css/styles.css" rel="stylesheet" />
 
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
 
     </head>
     <body>
@@ -34,10 +34,10 @@
                 <div class="row  gx-4 gx-lg-5 row-cols-2-md-3 row-cols-xl-4 justify-content-center"> 
                 <?php 
                 // Estabele conexão com o banco de dados
-                include('../db_functions/conection.php');
+                include('../../../../assets/banco/conection.php');
                 // Cria a Query
                 $produtos = "SELECT nome_produto, preco_produto, descricao_produto, imagem_produto 
-                FROM produtos WHERE id_categoria = '7'";
+                FROM produtos WHERE id_categoria = '6'";
                 $result_produtos = mysqli_query($conect, $produtos);
 
                 // teste para Array com Banco

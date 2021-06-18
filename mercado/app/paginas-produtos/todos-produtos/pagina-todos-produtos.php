@@ -27,7 +27,7 @@
 
         <section class="py-5">
             <div class="container text-center">
-                <h1 style="">Açougue</h1>      
+                <h1 style="">Todos os Produtos</h1>      
               </div>
             <div class="container px-4 px-lg-5 mt-5">
                 <!-- Inicio da Linha de produtos -->
@@ -37,7 +37,7 @@
                 include('../../../../assets/banco/conection.php');
                 // Cria a Query
                 $produtos = "SELECT nome_produto, preco_produto, descricao_produto, imagem_produto 
-                FROM produtos WHERE id_categoria = '1'";
+                FROM produtos";
                 $result_produtos = mysqli_query($conect, $produtos);
 
                 // teste para Array com Banco
@@ -52,7 +52,7 @@
 
                     <!-- Produto 01 -->
                     <div class="col mb-5">
-                        <div class="card h-100">
+                        <div class="card h-70">
                             <!-- Imagem do Produto - Inicio -->
                             <img class="card-img-top" src="<?php echo $arrayProdutos['imagem'] ?>" alt="imagem">
                             <!-- Imagem do Produto - Fim -->

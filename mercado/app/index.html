@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -18,32 +18,63 @@
         <script type="text/javascript" src="page-div.js"></script>
         <!-- Sidebars CSS -->
         <!-- <link rel="stylesheet" type="text/css" href="sidebars.css"> -->
-        
+
+        <!-- Javascript para subir ao topo -->
+        <script type="text/javascript">
+            
+            $(document).ready(function() {
+                $('#subir').click(function(){
+                    $('html, body').animate({scrollTop:0}, 'slow');
+                    return false;
+                });
+            });
+        </script>
+
     </head>
+
     <style type="text/css">
-        .drop-custom.show {
+        .drop-custom.show 
+        {
             width: max-content;
         }
-        .drop-custom.show .dropdown-menu {
+        .drop-custom.show .dropdown-menu 
+        {
             left: 50% !important;
             transform: translate3d(-50%, 38px, 0px) !important;
         }
-}
+
+        #subir{
+            position:fixed;
+            bottom:10px;
+            right:10px;
+        }
     </style>
-    <body>
+    <body onload="abrir_pag('paginas-produtos/todos-produtos/pagina-todos-produtos.php');" >
   </div>
         <div class="d-flex" id="wrapper">
             <!-- Sidebar-->
             <div class="border-end bg-white" id="sidebar-wrapper">
-                <div class="sidebar-heading border-bottom bg-light">Categorias</div>
+                <div class="sidebar-heading border-bottom bg-light">Produtos por Categorias</div>
                 <div class="list-group list-group-flush">
 
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3 " target="product-content" onclick="abrir_pag('paginas-produtos/todos-produtos/.php');">Todos os Produtos</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3 " target="product-content" onclick="abrir_pag('paginas-produtos/todos-produtos/pagina-todos-produtos.php');">Todos os Produtos</a>
                     <a class="list-group-item list-group-item-action list-group-item-light p-3 " target="product-content" onclick="abrir_pag('paginas-produtos/acougue/pagina-acougue.php');">Açougue</a>
                     <a class="list-group-item list-group-item-action list-group-item-light p-3"
                     href="#"
                     onclick="abrir_pag('paginas-produtos/bebidas/pagina-bebidas.php');">Bebidas</a>
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3 " target="product-content" onclick="abrir_pag('paginas-produtos/cereiais/pagina-cereias.php');">Cereais</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3 " target="product-content" onclick="abrir_pag('paginas-produtos/cereais/pagina-cereais.php');">Cereais</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3 " target="product-content" onclick="abrir_pag('paginas-produtos/doces/pagina-doces.php');">Doces</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3 " target="product-content" onclick="abrir_pag('paginas-produtos/frios/pagina-frios.php');">Frios</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3 " target="product-content" onclick="abrir_pag('paginas-produtos/higiene/pagina-higiene.php');">Higiene</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3 " target="product-content" onclick="abrir_pag('paginas-produtos/hortifruti/pagina-hortifruti.php');">Hortifruti</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3 " target="product-content" onclick="abrir_pag('paginas-produtos/infantil-bebe/pagina-infantil-bebe.php');">Infantil/Bebê</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3 " target="product-content" onclick="abrir_pag('paginas-produtos/laticinio/pagina-laticinio.php');">Laticínios</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3 " target="product-content" onclick="abrir_pag('paginas-produtos/limpeza/pagina-limpeza.php');">Limpeza</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3 " target="product-content" onclick="abrir_pag('paginas-produtos/massas/pagina-massas.php');">Massas</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3 " target="product-content" onclick="abrir_pag('paginas-produtos/mercearia/pagina-mercearia.php');">Mercearia</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3 " target="product-content" onclick="abrir_pag('paginas-produtos/padaria/pagina-padaria.php');">Padaria</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3 " target="product-content" onclick="abrir_pag('paginas-produtos/saudabilidade/pagina-saudabilidade.php');">Saudabilidade</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3 " target="product-content" onclick="abrir_pag('paginas-produtos/ultilidades/pagina-ultilidades.php');">Ultilidades</a>
                 </div>
             </div>
             <!-- Page content wrapper-->
@@ -51,7 +82,7 @@
                 <!-- Top navigation-->
                 <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
                     <div class="container-fluid text-center">
-                        <button class="btn btn-outline-success bi bi-arrow-down-left-circle-fill rounded-pill" id="sidebarToggle"> </button>
+                        <button class="btn btn-outline-success rounded-pill" id="sidebarToggle"> Menu </button>
                         <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                          -->
                          <!-- <p>Armazém Ponto Kent - Online</p> -->
@@ -85,11 +116,17 @@
                     </p> -->
 
             </div>
+            <div id="voltarTopo" >
+                <a class="btn btn-outline-success rounded-pill bi bi-arrow-up" 
+                href="#" id="subir"> </a> 
+            </div>
+
         </div>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="../../assets/dist/js/scripts.js"></script>
+       
         
     </body>
 </html>
