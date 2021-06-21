@@ -6,7 +6,7 @@ function abrir_pag(valor){
     xmlRequest.send(null);
  
         if (xmlRequest.readyState == 1) {
-            document.getElementById("conteudo_produtos").innerHTML = "<img src='loader.gif' alt ='hmm'>";
+            document.getElementById("conteudo_produtos").innerHTML;
         }
  
     return url;

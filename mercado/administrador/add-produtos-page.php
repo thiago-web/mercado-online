@@ -19,29 +19,29 @@
 			<h1 > Adicionar um produto</h1>
 		</div>
 		<div class="form" >
-			<form method="POST" action="add-produtos-control.php">
+			<form method="POST" action="add-produtos-control.php" enctype="multipart/form-data">
 				<div class=form-row>
 					<div class="form-group col-md-4">
 						<label for="categoria_prod">Catergoria do Produto</label>
 						<select name="categoria_produto" id="categoria_prod" class="form-control" required>
 							<option selected value="">Escolha</option>
-							<option value="1">Açougue</option>
-							<option value="2">Bebidas</option>
-							<option value="3">Cereais</option>
-							<option value="4">Doces</option>
-							<option value="5">Frios</option>
-							<option value="6">Higiene</option>
-							<option value="7">Hortifruti</option>
-							<option value="8">Infantil/Bebê</option>
-							<option value="9">Laticínio</option>
-							<option value="10">Limpeza</option>
-							<option value="11">Massas</option>
-							<option value="12">Mercearia</option>
-							<option value="13">Padaria</option>
-							<option value="14">PetShop</option>
-							<option value="15">Promoçoes</option>
-							<option value="16">Saudabilidade</option>
-							<option value="17">Ultilidades</option>
+							<option value="1">  Açougue</option>
+							<option value="2">  Bebidas</option>
+							<option value="3">  Cereais</option>
+							<option value="4">  Doces</option>
+							<option value="5">  Frios</option>
+							<option value="6">  Higiene</option>
+							<option value="7">  Hortifruti</option>
+							<option value="8">  Infantil/Bebê</option>
+							<option value="9">  Laticínio</option>
+							<option value="10"> Limpeza</option>
+							<option value="11"> Massas</option>
+							<option value="12"> Mercearia</option>
+							<option value="13"> Padaria</option>
+							<option value="14"> PetShop</option>
+							<option value="15"> Promoçoes</option>
+							<option value="16"> Saudabilidade</option>
+							<option value="17"> Ultilidades</option>
 						</select>
 					</div>
 					<div class="form-group col-md-4">
@@ -59,6 +59,7 @@
 						<textarea class="form-control" name="descricao_produto" rows="4" cols="2" ></textarea >
 					</div>
 					<div class="form-group col-md-6">
+						<input type="hidden" name="MAX_FILE_SIZE" value="99999999"/>
 						<label for ="imagem_prod">Imagem do Produto</label>
 						<input type="file" name="imagem_produto" id="imagem_prod" class="form-control" >
 					</div>

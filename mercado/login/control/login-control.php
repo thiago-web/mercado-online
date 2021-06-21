@@ -28,7 +28,7 @@ $row_id_user = mysqli_num_rows($result_id_user);
 if ($row_login == 1) {
 
 	if ($usuario == 'adm@armazem.com') {
-		header('location:adm/index.php ');
+		header('location:../../administrador/index.php');
 		exit();
 	} else {
 		$_SESSION['usuario']     = $usuario;

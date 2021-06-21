@@ -32,16 +32,25 @@
             <div class="container px-4 px-lg-5 mt-5">
                 <!-- Inicio da Linha de produtos -->
                 <div class="row  gx-4 gx-lg-5 row-cols-2-md-3 row-cols-xl-4 justify-content-center"> 
-                <?php 
+                <?php
+                // include('mostra_img.php');
                 // Estabele conexão com o banco de dados
                 include('../../../../assets/banco/conection.php');
                 // Cria a Query
-                $produtos = "SELECT nome_produto, preco_produto, descricao_produto, imagem_produto 
+                $produtos = "SELECT nome_produto, preco_produto, descricao_produto, imagem_produto,
                 FROM produtos WHERE id_categoria = '1'";
                 $result_produtos = mysqli_query($conect, $produtos);
 
+
+                // $sql_img = "SELECT imagem_produto FROM produtos WHERE id_categoria = '1'";
+                // $re_imagem = mysqli_query ($conect, $sql_img);
+                // $
+
                 // teste para Array com Banco
-                while($row = mysqli_fetch_assoc($result_produtos)){
+                while($row = mysqli_fetch_array($result_produtos)){
+                    // while ($imagem = mysqli_fetch_assoc($imagem)){
+
+
                     $arrayProdutos = array(
                         'nome'       => $row['nome_produto'],
                         'preco'      => $row['preco_produto'],
@@ -54,7 +63,7 @@
                     <div class="col mb-5">
                         <div class="card h-100">
                             <!-- Imagem do Produto - Inicio -->
-                            <img class="card-img-top" src="<?php echo $arrayProdutos['imagem'] ?>" alt="imagem">
+                            <img class="card-img-top" style="" width="" height="200px;"src="data:image/jpeg;base64,<?php echo base64_encode( $arrayProdutos['imagem']) ?>" alt="imagem">
                             <!-- Imagem do Produto - Fim -->
                             <!-- Detalhes do Produto - Inicio -->
                             <div class="card-body p-4 border-bottom-1 bg-transparent " >
@@ -102,6 +111,7 @@
                         }
 
                     }
+                
     ?>
                 <!-- Fim da linha de Produtos -->
             </div>
