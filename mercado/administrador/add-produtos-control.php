@@ -19,7 +19,8 @@ $nome_img = $_FILES['imagem_produto']['name'];
 
 // Faz a query
 $insert_produto = "INSERT INTO produtos(nome_produto, preco_produto, descricao_produto, id_categoria, imagem_produto, tamanho_imagem, tipo_imagem, nome_imagem ) 
-				   VALUES ('$nome_prod','$preco_prod', '$desc_prod', '$categ_prod', '$imagem_prod', '$tamanho', '$tipo', '$nome_img' )";
+				   VALUES ('$nome_prod','$preco_prod', '$desc_prod', '$categ_prod', '$imagem_prod', 
+				   '$tamanho', '$tipo', '$nome_img' )";
 // Resultado da query
 $insert_result = mysqli_query($conect, $insert_produto);
 

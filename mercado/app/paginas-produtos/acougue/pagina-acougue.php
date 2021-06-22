@@ -37,7 +37,7 @@
                 // Estabele conexão com o banco de dados
                 include('../../../../assets/banco/conection.php');
                 // Cria a Query
-                $produtos = "SELECT nome_produto, preco_produto, descricao_produto, imagem_produto,
+                $produtos = "SELECT nome_produto, preco_produto, descricao_produto, imagem_produto
                 FROM produtos WHERE id_categoria = '1'";
                 $result_produtos = mysqli_query($conect, $produtos);
 
@@ -63,7 +63,7 @@
                     <div class="col mb-5">
                         <div class="card h-100">
                             <!-- Imagem do Produto - Inicio -->
-                            <img class="card-img-top" style="" width="" height="200px;"src="data:image/jpeg;base64,<?php echo base64_encode( $arrayProdutos['imagem']) ?>" alt="imagem">
+                            <img class="card-img-top" style="" width="" height="150px;"src="data:image/jpeg;base64,<?php echo base64_encode( $arrayProdutos['imagem']) ?>" alt="imagem">
                             <!-- Imagem do Produto - Fim -->
                             <!-- Detalhes do Produto - Inicio -->
                             <div class="card-body p-4 border-bottom-1 bg-transparent " >
@@ -73,14 +73,12 @@
                                     
                                 </div>
                                 <!-- Button trigger modal -->
-                                
-
                           </div>
                             <!-- Detalhes do Produto - Fim -->
                             <!-- Ações do Produto - Inicio -->
-                            <div class="card-footer p-4 pt-0 border-top-1 bg-transparent ">
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent ">
                                 <div class="text-center mt-3" >
-                                    <a  class="btn btn-outline-danger mt-auto" href="?adicionar= <?php echo $key ?>" style=" border-color: black ; " > Adicionar ao Carrinho</a>
+                                    <a  class="btn btn-sm btn-success mt-auto rounded-pill" href="?adicionar= <?php echo $key ?>" > Adicionar ao Carrinho</a>
                                 </div>
                             </div>
                             <!-- Ações do Produto - Fim-->

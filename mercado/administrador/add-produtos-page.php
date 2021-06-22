@@ -19,7 +19,7 @@
 			<h1 > Adicionar um produto</h1>
 		</div>
 		<div class="form" >
-			<form method="POST" action="add-produtos-control.php" enctype="multipart/form-data">
+			<form method="POST" action="add-produtos-control.php">
 				<div class=form-row>
 					<div class="form-group col-md-4">
 						<label for="categoria_prod">Catergoria do Produto</label>
@@ -61,7 +61,7 @@
 					<div class="form-group col-md-6">
 						<input type="hidden" name="MAX_FILE_SIZE" value="99999999"/>
 						<label for ="imagem_prod">Imagem do Produto</label>
-						<input type="file" name="imagem_produto" id="imagem_prod" class="form-control" >
+						<input type="file" name="imagem_produto" id="imagem_prod" class="form-control"  data-loading-text="Salvando...">
 					</div>
 				</div>
 				<div class="form-row text-center">

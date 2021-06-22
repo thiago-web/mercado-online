@@ -48,10 +48,18 @@
             bottom:10px;
             right:10px;
         }
+        #wrapper{
+            position: relative;
+            top: 50px;
+        }
+        /*#page-content-wrapper{
+         position: relative;
+            top: 50px;   
+        }*/
     </style>
     <body onload="abrir_pag('paginas-produtos/todos-produtos/pagina-todos-produtos.php');" >
   </div>
-        <div class="d-flex" id="wrapper">
+        <div class="d-flex " id="wrapper">
             <!-- Sidebar-->
             <div class="border-end bg-white" id="sidebar-wrapper">
                 <div class="sidebar-heading border-bottom bg-light">Produtos por Categorias</div>
@@ -82,7 +90,7 @@
             <!-- Page content wrapper-->
             <div id="page-content-wrapper">
                 <!-- Top navigation-->
-                <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+                <nav id="navbar-bot" class="navbar fixed-top navbar-expand-lg navbar-light bg-light border-bottom">
                     <div class="container-fluid text-center">
                         <button class="btn btn-outline-success rounded-pill" id="sidebarToggle"> Menu </button>
                         <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
