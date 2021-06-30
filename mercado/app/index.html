@@ -28,6 +28,16 @@
                     return false;
                 });
             });
+
+            function openNav() {
+              document.getElementById("side").style.width = "250px";
+              document.getElementById("main").style.marginLeft = "250px";
+            }
+
+            function closeNav() {
+              document.getElementById("side").style.width = "0";
+              document.getElementById("main").style.marginLeft= "0";
+            }
         </script>
 
     </head>
@@ -61,13 +71,17 @@
   </div>
         <div class="d-flex " id="wrapper">
             <!-- Sidebar-->
+            
             <div class="border-end bg-white" id="sidebar-wrapper">
-                <div class="sidebar-heading border-bottom bg-light">Produtos por Categorias</div>
-                <div class="list-group list-group-flush">
+                <div class="sidebar-heading border-bottom bg-dark text-white "> 
+                    <p> Produtos por Categorias</p>
+                    <a href="javascript:void(0)" class="closebtn">X</a> 
+                </div>
+                <div class="list-group list-group-flush" id = "side">
 
                     <a class="list-group-item list-group-item-action list-group-item-light p-3 " 
                     target="product-content" 
-                    onclick="abrir_pag('paginas-produtos/todos-produtos/pagina-todos-produtos.php');">Todos os Produtos</a>
+                    onclick="abrir_pag('paginas-produtos/todos-produtos/pagina-todos-produtos.php');" onclick="closeNav()">Todos os Produtos</a>
                     <a class="list-group-item list-group-item-action list-group-item-light p-3 " target="product-content" onclick="abrir_pag('paginas-produtos/acougue/pagina-acougue.php');">Açougue</a>
                     <a class="list-group-item list-group-item-action list-group-item-light p-3"
                     href="#"
@@ -87,12 +101,15 @@
                     <a class="list-group-item list-group-item-action list-group-item-light p-3 " target="product-content" onclick="abrir_pag('paginas-produtos/ultilidades/pagina-ultilidades.php');">Ultilidades</a>
                 </div>
             </div>
+
             <!-- Page content wrapper-->
             <div id="page-content-wrapper">
                 <!-- Top navigation-->
                 <nav id="navbar-bot" class="navbar fixed-top navbar-expand-lg navbar-light bg-light border-bottom">
-                    <div class="container-fluid text-center">
-                        <button class="btn btn-outline-success rounded-pill" id="sidebarToggle"> Menu </button>
+                    <div class="container-fluid text-center" id="main">
+                        <button class="btn btn-outline-success rounded-pill" id="sidebarToggle"> 
+                            Menu 
+                        </button>
                         <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                          -->
                          <!-- <p>Armazém Ponto Kent - Online</p> -->
@@ -132,6 +149,7 @@
             </div>
 
         </div>
+    </div>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
